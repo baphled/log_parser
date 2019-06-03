@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+require "optparse"
+require "ostruct"
+require "file"
+
+options = OpenStruct.new
+
+OptionParser.new do |opt|
+  opt.on('-l', '--log LOGFILE', 'The log') { |o| options.log = o }
+end.parse!
+
+file = File.read(options.log)
+
+output = LogParser(file)
