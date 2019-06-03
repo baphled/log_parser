@@ -1,6 +1,10 @@
 = log_parser
 
-Description goes here.
+A basic log parser that collates the total number of page visits within a log file
+
+== Usage
+
+`bundle exec ./bin/log_parser PATH-TO-LOG-FILE`
 
 == Contributing to log_parser
  
